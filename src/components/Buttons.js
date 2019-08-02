@@ -35,6 +35,13 @@ class BaseButton extends Component {
                     </button>
                 );
                 break;
+            default:
+                buttonContent = (
+                    <button className="component-button__button" onClick={onPress}>
+                        {children}
+                    </button>
+                );
+                break;
         }
 
         return buttonContent;

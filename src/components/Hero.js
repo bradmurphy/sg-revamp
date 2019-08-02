@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png';
 import { GreenButton, ClearButton } from "./Buttons";
+import PropTypes from "prop-types";
 
 class Hero extends Component {
     state = {
@@ -36,6 +37,7 @@ class Hero extends Component {
     };
 
     render() {
+        const { onPressWho, onPressContact } = this.props;
         const { bgPos, logoPos } = this.state;
 
         return (
@@ -45,8 +47,8 @@ class Hero extends Component {
                         <img src={logo} className="component-hero__logo" alt="Sabrina Girvan" />
                         <h1 className="component-hero__logo-text"><em>personal</em> trainer</h1>
                         <div className="component-hero__button-container">
-                            <GreenButton onPress={() => console.log('click')}>Who  am I?</GreenButton>
-                            <ClearButton onPress={() => console.log('click')}>Contact Me</ClearButton>
+                            <GreenButton onPress={onPressWho}>Who  am I?</GreenButton>
+                            <ClearButton onPress={onPressContact}>Contact Me</ClearButton>
                         </div>
                     </div>
                 </div>
@@ -54,5 +56,10 @@ class Hero extends Component {
         );
     }
 }
+
+Hero.propTypes = {
+    onPressWho: PropTypes.func,
+    onPressContact: PropTypes.func
+};
 
 export default Hero;

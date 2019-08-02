@@ -36,18 +36,23 @@ body, html {
 	height: 100%;
 	width: 100%;
 
-	article	{
-		background-color: $navy;
+	#copy-wrap	{
+		background-color: $off-white;
+		padding: 25px 0;
 		position: relative;
 		width: 100%;
 		z-index: 10;
 
-		main {
+		div {
 			margin: 0 auto;
 			max-width: 1024px;
 
 			p {
+				color: $navy;
+				font-family: $copy-font;
+				font-size: 1.25em;
 				margin: 15px 0;
+				text-transform: none;
 			}
 		}
 	}
