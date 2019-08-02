@@ -1,0 +1,54 @@
+.component-button {
+
+	&__button {
+		border-radius: 4px;
+		cursor: pointer;
+		font-family: $copy-font;
+		font-size: 1em;
+		outline: 0;
+		padding: 15px;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in;
+
+		@media screen and (min-width: 768px) {
+			font-size: 1.1em;
+			padding: 20px;
+		}
+
+		&--menu {
+			font-size: 0.55em;
+			font-weight: 700;
+			margin-bottom: 0 !important;
+			padding: 5px 10px;
+
+			@media screen and (min-width: 768px) {
+				font-size: 0.75em;
+			}
+		}
+
+		&--green {
+			background-color: $green;
+			border: 2px solid $green;
+			color: $off-white;
+			margin-bottom: 10px;
+
+			@media screen and (min-width: 768px) {
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+
+		&--clear {
+			background-color: transparent;
+			border: 2px solid $orange;
+			color: $off-white;
+
+			@media screen and (min-width: 768px) {
+				&:hover {
+					background: $orange;
+				}
+			}
+		}
+	}
+}
