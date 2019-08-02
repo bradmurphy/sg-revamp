@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png';
-import debounce from 'lodash.debounce';
 
 class Hero extends Component {
     state = {
@@ -14,10 +13,6 @@ class Hero extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll.bind(this));
-
-        this.debounceAnimate =  debounce((e) => {
-            window.requestAnimationFrame(this.parallaxMagic.bind(this))
-        }, 10);
     };
 
     componentWillUnmount() {
@@ -25,7 +20,7 @@ class Hero extends Component {
     };
 
     handleScroll() {
-        this.debounceAnimate();
+        window.requestAnimationFrame(this.parallaxMagic.bind(this));
     };
 
     parallaxMagic() {
