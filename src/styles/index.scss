@@ -1,0 +1,53 @@
+// Reset
+@import 'reset';
+
+// Colors
+$navy: #27333d;
+$off-white: #efefef;
+$green: #48a65b;
+$orange: #fbb849;
+
+// Fonts
+$copy-font: 'Montserrat', sans-serif;
+$header-font: 'Merriweather', serif;
+$logo-font: 'Open Sans', sans-serif;
+
+// Components
+@import 'components/hero';
+@import 'components/header';
+
+body, html {
+	background-color: $navy;
+	color: $off-white;
+	font-family: $copy-font;
+	font-size: 18px;
+	height: 100%;
+	text-transform: uppercase;
+	width: 100%;
+
+	#root {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.component-app {
+	height: 100%;
+	width: 100%;
+
+	article	{
+		background-color: $navy;
+		position: relative;
+		width: 100%;
+		z-index: 10;
+
+		main {
+			margin: 0 auto;
+			max-width: 1024px;
+
+			p {
+				margin: 15px 0;
+			}
+		}
+	}
+}
