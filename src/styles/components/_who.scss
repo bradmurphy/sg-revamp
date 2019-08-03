@@ -1,0 +1,23 @@
+.component-who {
+	padding-bottom: 50px;
+
+	&__philosophy {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 100px;
+
+		@media screen and (min-width: 768px) {
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&-block {
+			width: 100%;
+
+			@media screen and (min-width: 768px) {
+				width: 45%;
+			}
+		}
+	}
+}

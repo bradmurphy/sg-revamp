@@ -8,7 +8,7 @@
 	height: 60px;
 	justify-content: space-between;
 	left: 0;
-	padding: 20px;
+	padding: 10px;
 	position: fixed;
 	top: 0;
 	transition: all .3s ease-in;
@@ -19,18 +19,30 @@
 	-ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	-o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
+	@media screen and (min-width: 375px) {
+		padding: 20px;
+	}
+
 	&__logo {
-		height: 30px;
+		height: 25px;
+
+		@media screen and (min-width: 375px) {
+			height: 30px;
+		}
 	}
 
 	&__button-container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 210px;
+		width: 170px;
+
+		@media screen and (min-width: 375px) {
+			width: 180px;
+		}
 
 		@media screen and (min-width: 768px) {
-			width: 235px;
+			width: 200px;
 		}
 	}
 

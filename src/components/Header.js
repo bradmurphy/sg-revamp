@@ -12,7 +12,7 @@ class Header extends Component {
             <header className="component-header" style={headerStyles}>
                 <img src={logo} className="component-header__logo" alt="Sabrina Girvan"/>
                 <div className="component-header__button-container">
-                    <GreenMenuButton onPress={onPressWho}>Who  am I?</GreenMenuButton>
+                    <GreenMenuButton onPress={onPressWho}>Info</GreenMenuButton>
                     <ClearMenuButton onPress={onPressContact}>Contact Me</ClearMenuButton>
                 </div>
             </header>
