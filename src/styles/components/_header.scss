@@ -25,9 +25,14 @@
 
 	&__logo {
 		height: 25px;
+		outline: 0;
 
 		@media screen and (min-width: 480px) {
 			height: 30px;
+		}
+
+		@media screen and (min-width: 768px) {
+			cursor: pointer
 		}
 	}
 

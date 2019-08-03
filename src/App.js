@@ -15,6 +15,7 @@ class App extends Component {
     constructor(props) {
         super(props);
 
+        this.home = React.createRef();
         this.who = React.createRef();
         this.contact = React.createRef();
     }
@@ -55,15 +56,16 @@ class App extends Component {
         const { showHeader } = this.state;
 
         return (
-            <div className="component-app">
+            <div className="component-app" ref={this.home}>
                 <Header
-                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop *  1.195)}
+                    onPressHome={() => this.scrollTo(this.home.current.offsetTop)}
+                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop)}
                     show={showHeader}
                 />
                 <Hero
                     ref={this.hero}
                     onPressWho={() => this.scrollTo(this.who.current.offsetTop)}
-                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop * 1.195)}
+                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop)}
                 />
                 <section id="wrap" ref={this.who}>
                     <Who />
@@ -72,8 +74,8 @@ class App extends Component {
                             <h1 className="typography__headline typography__headline--light">Contact</h1>
                         </article>
                     </section>
-                    <div ref={this.contact} />
                     <Contact />
+                    <div ref={this.contact}/>
                 </section>
             </div>
         );
