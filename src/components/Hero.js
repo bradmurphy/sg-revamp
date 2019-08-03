@@ -9,7 +9,7 @@ class Hero extends Component {
             transform:'translate3d(0, 0, 0)'
         },
         logoPos: {
-            transform:'translate3d(0, -225px, 0)'
+            transform:'translate3d(0, -175px, 0)'
         }
     };
 
@@ -28,7 +28,7 @@ class Hero extends Component {
     parallaxMagic() {
         const scrollTop = window.pageYOffset;
         const yPosBG = Math.round(scrollTop * .65);
-        const yPosLogo = Math.round(-225 + (scrollTop * .45));
+        const yPosLogo = Math.round(-175 + (scrollTop * .45));
 
         this.setState({
             bgPos: { transform: `translate3d(0, ${yPosBG}px, 0px)` },
