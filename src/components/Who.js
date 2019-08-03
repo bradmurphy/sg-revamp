@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import profile1 from '../images/profile1.jpg';
+import profile2 from '../images/profile2.jpg';
 
 class Who extends Component {
     render() {
         return (
             <article className="component-who padding">
                 <h1 className="typography__headline typography__headline--dark">Who Am I?</h1>
+                <img src={profile1} className="component-who__profile-image" alt="Sabrina Girvan" />
                 <p className="typography__copy">
                     Most of my life I have been an active person. My passions in my youth were ballet and tap, but I have always loved various styles of dance. As I approached high school I progressed into sporting activities. Unfortunately for me, due to genetics and poor diet I began gaining weight. And of course this was at a time when you are young and vulnerable—the worst time for this to occur. I found the courage and strength to start making changes in my eating habits as well as increasing my exercise. As we read about our nation’s issues with childhood obesity — I share a very personal experience with this struggle.
                 </p>
@@ -12,6 +15,7 @@ class Who extends Component {
                     Having committed to a new change in lifestyle and in attaining my goal weight –I realized it was not enough. Through the process I had gained confidence and discipline…and I absolutely loved the new “Me!” (Not to mention my new body). I began a new journey—and ventured into the world of Resistance/Strength Training. I engaged a Personal Trainer for correct techniques in weights, strength and cardio training and the best way to attain over-all health and well being. This is where I became a huge enthusiast and knew that I would need to share my excitement!
                 </p>
                 <h1 className="typography__headline typography__headline--dark">My Philosophy</h1>
+                <img src={profile2} className="component-who__profile-image" alt="Sabrina Girvan" />
                 <div className="component-who__philosophy">
                     <div className="component-who__philosophy-block">
                         <p className="typography__copy">

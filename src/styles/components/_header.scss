@@ -19,30 +19,47 @@
 	-ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	-o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
-	@media screen and (min-width: 375px) {
+	@media screen and (min-width: 480px) {
 		padding: 20px;
 	}
 
 	&__logo {
 		height: 25px;
 
-		@media screen and (min-width: 375px) {
+		@media screen and (min-width: 480px) {
 			height: 30px;
 		}
 	}
 
-	&__button-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		width: 170px;
+	&__instagram-logo {
+		height: 28px;
 
-		@media screen and (min-width: 375px) {
-			width: 180px;
+		@media screen and (min-width: 480px) {
+			height: 29px;
 		}
 
 		@media screen and (min-width: 768px) {
-			width: 200px;
+			height: 31px;
+		}
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__button-container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 140px;
+
+		@media screen and (min-width: 480px) {
+			width: 260px;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 285px;
 		}
 	}
 

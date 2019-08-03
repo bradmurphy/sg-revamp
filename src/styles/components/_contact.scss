@@ -1,4 +1,112 @@
 .component-contact {
 	background-color: $green;
 	padding: 1px;
+
+	&__form-thankyou {
+		color: $off-white;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 175px;
+		max-width: 800px;
+		padding: 15px;
+		text-align: center;
+
+		&[hidden] {
+			display: none;
+		}
+	}
+
+	&__form-error {
+		align-self: center;
+		background-color: $red;
+		border-radius: 4px;
+		font-size: 0.75em;
+		max-width: 800px;
+		padding: 15px;
+		width: 90%;
+
+		@media screen and (min-width: 768px) {
+			padding: 20px;
+		}
+
+		&[hidden] {
+			display: none;
+		}
+
+		a {
+			color: $off-white;
+		}
+	}
+
+	&__form-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 700px;
+		margin-bottom: 75px;
+		transition: all .3s ease-in;
+
+		&[hidden] {
+			display: none;
+		}
+	}
+
+	&__form-input {
+		background-color: $off-white;
+		border: 0;
+		border-radius: 4px;
+		font-size: 1em;
+		line-height: 1.4em;
+		outline: 0;
+		padding: 20px;
+		transition: all .3s ease-in;
+
+		&--error {
+			background-color: $red;
+			border: 1px solid $off-white;
+			color: $off-white;
+
+			&::placeholder {
+				color: $off-white !important;
+			}
+		}
+
+		&::placeholder {
+			color: $navy;
+		}
+
+		&--text-area {
+			height: 300px;
+		}
+
+		@media screen and (min-width: 480px) {
+			font-size: 1.125em;
+			line-height: 1.5em;
+		}
+
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: 1px solid $orange;
+	font-size: 1em;
+	line-height: 1.4em;
+	outline: 0;
+	padding: 20px;
+	transition: all .3s ease-in;
+	-webkit-text-fill-color: $orange;
+	-webkit-box-shadow: 0 0 0px 1000px $green inset;
+
+	@media screen and (min-width: 480px) {
+		font-size: 1.125em;
+		line-height: 1.5em;
+	}
 }

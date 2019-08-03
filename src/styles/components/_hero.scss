@@ -7,6 +7,7 @@
 		align-items: center;
 		display: flex;
 		background-image: url('../images/bg-hero.jpg');
+		background-position: center center;
 		background-size: 100% 100%;
 		flex-direction: column;
 		height: 100%;
@@ -20,6 +21,7 @@
 		background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(239,239,239,0) 70%);
 		bottom: -20%;
 		height: 50%;
+		pointer-events: none;
 		position: absolute;
 		width: 100%;
 	}
@@ -75,12 +77,26 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		height: 185px;
 		margin-top: 30px;
 		width: 100%;
 
 		@media screen and (min-width: 768px) {
 			flex-direction: row;
-			max-width: 350px;
+			height: auto;
+			max-width: 435px;
+		}
+	}
+
+	&__instagram-logo {
+		height: 51px;
+
+		@media screen and (min-width: 768px) {
+			height: 64px;
+		}
+
+		img {
+			height: 100%;
 		}
 	}
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png';
+import instagramLogo from '../images/instagram.png';
 import { GreenButton, ClearButton } from "./Buttons";
 import PropTypes from "prop-types";
 
@@ -49,6 +50,9 @@ class Hero extends Component {
                         <div className="component-hero__button-container">
                             <GreenButton onPress={onPressWho}>Who  am I?</GreenButton>
                             <ClearButton onPress={onPressContact}>Contact Me</ClearButton>
+                            <a href="https://www.instagram.com/sabrinagirvan/" className="component-hero__instagram-logo" target="_blank" rel="noopener noreferrer">
+                                <img src={instagramLogo} alt="Instagram" />
+                            </a>
                         </div>
                     </div>
                 </div>

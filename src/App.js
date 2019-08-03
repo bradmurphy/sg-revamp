@@ -25,8 +25,6 @@ class App extends Component {
         this.debounceAnimate =  debounce((e) => {
             window.requestAnimationFrame(this.animateHeader.bind(this))
         }, 15);
-
-        console.log(this.who, this.contact);
     };
 
     componentWillUnmount() {
@@ -60,19 +58,24 @@ class App extends Component {
             <div className="component-app">
                 <Header
                     onPressWho={() => this.scrollTo(this.who.current.offsetTop)}
-                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop)}
+                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop *  1.195)}
                     show={showHeader}
                 />
                 <Hero
                     ref={this.hero}
                     onPressWho={() => this.scrollTo(this.who.current.offsetTop)}
-                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop)}
+                    onPressContact={() => this.scrollTo(this.contact.current.offsetTop * 1.195)}
                 />
                 <section id="wrap" ref={this.who}>
                     <Who />
+                    <section className="component-contact">
+                        <article className="padding">
+                            <h1 className="typography__headline typography__headline--light">Contact</h1>
+                        </article>
+                    </section>
+                    <div ref={this.contact} />
                     <Contact />
                 </section>
-                <div ref={this.contact} />
             </div>
         );
     }
