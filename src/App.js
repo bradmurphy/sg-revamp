@@ -57,7 +57,6 @@ class App extends Component {
         return (
             <div className="component-app">
                 <Header
-                    onPressWho={() => this.scrollTo(this.who.current.offsetTop)}
                     onPressContact={() => this.scrollTo(this.contact.current.offsetTop *  1.195)}
                     show={showHeader}
                 />

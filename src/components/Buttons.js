@@ -9,14 +9,7 @@ class BaseButton extends Component {
         switch(mode) {
             case 'clear-menu':
                 buttonContent = (
-                    <button className="component-button__button component-button__button--clear component-button__button--menu" onClick={onPress} disabled={disabled}>
-                        {children}
-                    </button>
-                );
-                break;
-            case 'green-menu':
-                buttonContent = (
-                    <button className="component-button__button component-button__button--green component-button__button--menu component-button__button--hide" onClick={onPress} disabled={disabled} hidden={hidden}>
+                    <button className="component-button__button component-button__button--clear component-button__button--menu  component-button__button--hide" onClick={onPress} disabled={disabled}>
                         {children}
                     </button>
                 );
@@ -69,10 +62,6 @@ export const GreenButton = (props) => {
 
 export const ClearButton = (props) => {
     return <BaseButton {...props} mode="clear" />
-};
-
-export const GreenMenuButton = (props) => {
-    return <BaseButton {...props} mode="green-menu" />
 };
 
 export const ClearMenuButton = (props) => {
