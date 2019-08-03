@@ -43,6 +43,7 @@ class Hero extends Component {
         return (
             <section className="component-hero">
                 <div className="component-hero__hero-background" style={bgPos}>
+                    <div className="component-hero__hero-background--overlay" />
                     <div className="component-hero__logo-container" style={logoPos}>
                         <img src={logo} className="component-hero__logo" alt="Sabrina Girvan" />
                         <h1 className="component-hero__logo-text"><em>personal</em> trainer</h1>

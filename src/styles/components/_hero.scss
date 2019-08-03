@@ -12,8 +12,21 @@
 		flex-direction: column;
 		height: 100%;
 		justify-content: center;
+		position: relative;
 		transition: all .075s ease-in;
 		width: 100%;
+
+		&--overlay {
+			background: $navy;
+			background: linear-gradient(0deg, rgba(0,0,0,0) 0%, $navy 85%);
+			height: 100%;
+			left: 0;
+			opacity: 0.25;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
 	}
 
 	&__hero-gradient {
@@ -31,11 +44,10 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 591px;
-		padding: 0 20px;
 		position: fixed;
 		transition: all .075s ease-in;
 		width: 100%;
-		z-index: 1;
+		z-index: 2;
 
 		@media screen and (min-width: 768px) {
 			padding: 0;
