@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { SubmitButton } from "./Buttons";
-
 const API_PATH = `${window.origin}/api/contact/index.php`;
-
 
 class Contact extends Component {
     state = {
@@ -37,7 +35,7 @@ class Contact extends Component {
         return validation;
     };
 
-    handleFormSubmit = (e) => {
+    handleFormSubmit = async (e) => {
         e.preventDefault();
 
         const { name, email, message } = this.state;
@@ -48,23 +46,25 @@ class Contact extends Component {
 
         const canSubmit = !nameErr && !emailErr && !messageErr;
 
-        if (canSubmit) {
-            axios.post(`${API_PATH}`,
-                { ...this.state },
-                {
-                    headers: { 'content-type': 'application/json' }
-                })
-                .then((resp) => this.setState({ sent: resp.data.sent }) )
-                .catch(() => this.setState({ error: true }) );
-        } else {
-            this.setState({
-               inputErrors: {
-                   name: nameErr,
-                   email: emailErr,
-                   message: messageErr,
-               }
-            });
+        try {
+            if (canSubmit) {
+                const resp = await axios.post(`${API_PATH}`,
+                    { ...this.state },
+                    {
+                        headers: { 'content-type': 'application/json' }
+                    });
+                this.setState({ sent: resp.data.sent });
+            } else {
+                this.setState({
+                    inputErrors: {
+                        name: nameErr,
+                        email: emailErr,
+                        message: messageErr,
+                    }
+                });
+            }
         }
+        catch(e) { this.setState({ error: true } ) }
     };
 
     render() {

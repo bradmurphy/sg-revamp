@@ -102,8 +102,8 @@ select:-webkit-autofill:focus {
 	outline: 0;
 	padding: 20px;
 	transition: all .3s ease-in;
-	-webkit-text-fill-color: $orange;
-	-webkit-box-shadow: 0 0 0px 1000px $green inset;
+	-webkit-text-fill-color: $off-white;
+	-webkit-box-shadow: 0 0 0px 1000px $orange inset;
 
 	@media screen and (min-width: 480px) {
 		font-size: 1.125em;
